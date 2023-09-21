@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Lesson 7</title>
+        <style>
+            fieldset legend{color: rgb(17, 231, 142);font-weight: bold; font-style: italic;}
+            fieldset legend{font-family: monospace, "Courier New" ;}
+            fieldset{border: 2px solid rgb(134, 236, 160);border-radius: 12px; margin:2em 1em 2em 1em} 
+            label{font-weight: bold;}
+            span {font-weight: bold;}
+            input.full-width{width:100%; margin-bottom:1.2em}
+            select.full-width{width:100%; margin-bottom:1.2em}
+            body{margin:4em}
+            textarea {width:100%; margin-bottom:1.2em}
+        </style>       
+    </head>
+    <body>
+        <form action="/action_page.php">
+        <fieldset>
+            <legend>Basic User Information:</legend>
+            <label for="full-name">Full Name:</label> <br>
+            <input class="full-width" type="text" id="full-name" name="full-name" required><br> 
+            <label for="c-email">Email:</label> <br>
+            <input class="full-width" type="email" id="c-email" name="c-email" required><br>
+            <label for="password">Password:</label> <br>
+            <input class="full-width" type="password" id="password" name="password" required><br>
+            <label for="c-password">Confirm Password</label> <br>
+            <input class="full-width" type="password" id="c-password" name="c-password"><br>
+            <span>Gender:</span><br><br>
+            <input type="radio" id="male" name="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="female" value="female">
+            <label for="female">Female</label> 
+            <input type="radio" id="other" name="other" value="other">
+            <label for="other">Other</label> <br><br>
+            <label for="date-of-birth">Date of Birth:</label><br><br>
+            <input class="full-width" type="date" id="date-of-birth" name="date-of-birth"><br>    
+        </fieldset>
+
+        <fieldset>
+            <legend>Address Information:</legend>
+            <label for="street-address">Street Address:</label> <br>
+            <textarea id="street-address" name="street-address" rows="3" cols="50"></textarea><br>
+            <label for="country">Country:</label><br>
+            <select class="full-width" name="country" id="country">
+                <option value="usa">USA</option>
+                <option value="china">China</option>
+                <option value="russia">Russia</option>
+                <option value="germany">Germany</option>
+                <option value="uk">UK</option>
+            </select>
+            <br>
+            <label for="city">City:</label> <br>
+            <input class="full-width" type="text" id="city" name="city"><br> 
+            <label for="postal-code">Postal Code:</label> <br>
+            <input class="full-width" type="number" id="postal-code" name="postal-code"><br>    
+        </fieldset>
+        <fieldset>
+            <legend>Preferences:</legend>  
+            <span>Preferred Contact Method:</span><br>
+            <input type="checkbox" id="email" name="email" value="email">
+            <label for="email">Email</label>
+            <input type="checkbox" id="phone" name="phone" value="phone">
+            <label for="phone">Phone</label>
+            <input type="checkbox" id="p-mail" name="p-mail" value="p-mail">
+            <label for="p-mail">Postal Mail</label><br><br>
+            <label for="fav-color">Favorite Color:</label>
+            <input type="color" id="fav-color" name="fav-color">
+         </fieldset>
+         <fieldset>
+            <legend>Additional Details:</legend>
+            <label for="source">How did you hear about us?</label><br>
+            <select class="full-width" id="source" name="source">
+                <option value="Internet">Internet</option>
+                <option value="friend">Friend</option>
+                <option value="advertisement">Advertisement</option>
+            </select>
+            <br>
+            <label for="feedback">Feedback/Comments:</label> <br>
+            <textarea id="feedback" name="feedback" rows="3" cols="50"></textarea><br>
+         </fieldset>
+         <fieldset>
+            <legend>Profile:</legend>
+            <label for="upload-a-profile-picture">Upload a Profile Picture:</label>
+            <input type="file" id="upload-a-profile-picture" name="picture" accept=".png, .jpg"><br>
+            <label for="url">Website URL:</label> <br>
+            <input class="full-width" type="text" id="url" name="url"><br>
+                <label for="vol">Expirience Level with HTML:</label>
+                <input type="range" id="vol" name="vol" min="0" max="10">
+         </fieldset><br><br>
+         <input type="submit" value="Submit">
+         <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
